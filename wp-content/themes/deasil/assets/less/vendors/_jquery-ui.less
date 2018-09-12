@@ -1,0 +1,31 @@
+/*---------- 4.3 JQuery UI - Override ----------*/
+
+.ui-slider{
+  height: 10px;
+  border: 0px;
+  .border-radius(0px);
+  .ui-slider-handle{
+    border: 0px;
+    @height: 20px;
+    height: @height;
+    width: 8px;
+    margin-left: 0px;
+    .border-radius(0px);
+    & + .ui-slider-handle{
+      margin-left: -0.6em;
+    }
+  }
+  &.ui-slider-horizontal .ui-slider-handle{
+    top: -5px;
+  }
+}
+.price-range{
+  #amount{
+    margin-bottom: 10px;
+  }
+}
+
+
+.ui-datepicker{
+ z-index: 99 !important;
+}

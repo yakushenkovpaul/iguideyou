@@ -1,0 +1,352 @@
+/*---------- 2.4  Carousel ----------*/
+
+.keyframes(zooming, {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+	});
+.zooming{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-repeat:  no-repeat;
+	background-position: center;
+	background-size: cover;
+	//mixin defied on mixins/_mixins.less
+	.animation(zooming 30s infinite ease-in);
+}
+
+
+
+.carousel{
+	.carousel-inner{
+		height: 100%;
+		position: absolute;
+	}
+	.item{
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	@width: 80px;
+	@height: 80px;
+	.carousel-control{
+		width: @width;
+		height: @height;
+		text-align: left;
+		z-index: 99;
+		background: rgba(0,0,0,.5);
+		color: #fff;
+		top: 50%;
+		margin-top: -@height/2;
+		[class^='icon-'], .fa, .glyphicon {
+			font-size: 20px;
+			position: absolute;
+			width: @width;
+			line-height: @height;
+			text-align: center;
+			left: 0px;
+			top: 0px;
+		}
+	}
+	.carousel-control.left{
+		left: 15px;
+		&:hover{
+			#gradient.horizontal(@start-color : rgba(0,0,0,.5); @end-color : rgba(0,0,0,0); @start-percent : 0%; @end-percent : 100%);
+		}
+		&.bottom{
+			top: auto;
+			margin: 0;
+			bottom: 30px;
+		}
+		&.bottom-right{
+			top: auto;
+			margin: 0;
+			bottom: 30px;
+			left: auto;
+			right: @width + 15px;
+		}
+		&.bottom-left{
+			top: auto;
+			margin: 0;
+			bottom: 30px;
+		}
+	}
+	.carousel-control.right{
+		right: 15px;
+		&:hover{
+			#gradient.horizontal(@start-color : rgba(0,0,0,0); @end-color : rgba(0,0,0,.5); @start-percent : 0%; @end-percent : 100%);
+		}
+		&.bottom{
+			top: auto;
+			margin: 0;
+			bottom: 30px;
+		}
+		&.bottom-right{
+			top: auto;
+			margin: 0;
+			bottom: 30px;
+		}
+		&.bottom-left{
+			top: auto;
+			margin: 0;
+			bottom: 30px;
+			right: auto;
+			left: @width + 15px;
+		}
+	}
+
+	.carousel-indicators{
+		width: 100%;
+		left: 0;
+		margin-left: 0;
+		li{
+			@height: 10px;
+			height: @height;
+			width: @height;
+			margin: 0 2px;
+			border: none;
+			&.active{
+				height: @height;
+				width: @height;
+			}
+		}
+		&.square{
+			li{
+				.border-radius(0px);
+			}
+		}
+		&.dashed{
+			li{	
+				height: 4px;
+				width: 20px;
+				.border-radius(0px);
+			}
+		}
+	}
+}
+
+.carousel-fade {
+	.carousel-inner {
+		.item {
+			transition-property: opacity;
+		}
+
+		.item,
+		.active.left,
+		.active.right {
+			opacity: 0;
+		}
+
+		.active,
+		.next.left,
+		.prev.right {
+			opacity: 1;
+		}
+
+		.next,
+		.prev,
+		.active.left,
+		.active.right {
+			left: 0;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+}
+
+
+
+//mixin .keyframe defied on mixins/_mixins.less
+.main-img{
+	min-height: 600px;
+	width: 100%;
+	margin: 0px;
+	padding-top: 0px;
+	position: relative;
+	background-repeat:  no-repeat;
+	background-position: center;
+	background-size: cover;
+	&.boxed{
+		.main-image-txt{
+			margin-top: 0px;
+		}
+	}
+}
+
+.with-overlay:before{
+	@seperate: 4px;
+	@seperateplus: @seperate + 1;
+	content: '';
+	height: 100%;
+	width: 100%;
+	background-image: url('@{baseurl}/mask.png');
+	background-repeat: repeat;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 9;
+}
+
+
+.main-image-txt, .carousel-caption{
+	@width: 100%;
+	width: @width;
+	color: #fff;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 140px;
+	bottom: auto;
+	left: 0;
+	right: auto;
+	z-index: 10;  
+	text-align: center;
+	.main-header{
+		margin: 0 0 30px;
+		text-transform: uppercase;
+		font-weight: bold;
+		position: relative;
+		&:after{
+			@width: 200px;
+			width: @width;
+			content: "";
+			position: absolute;
+			bottom: -15px;
+			left: 50%;
+			margin-left: -(@width/2);
+		}
+	}
+	hr{
+		display: table;
+		width: 80px;
+		margin: 20px auto;
+	}
+	.sub-header{
+		margin: 10px auto 0px;
+		font-size: 1.2em;
+		line-height: 1.5;
+		max-width: 600px;
+		font-weight: normal;
+	}
+	.multi-caption{
+		width: 800px;
+		margin: 0 auto;
+		padding: 30px;
+	}
+	.carousel-content{
+		padding: 30px;
+		h1, h2, h3, h4, h5, h6{
+			margin-top: 0px;
+		}
+	}
+	.search-bar{
+		text-shadow: none;
+	}
+}
+
+.with-text-box{
+	.multi-caption, .carousel-content{
+		background: rgba(0,0,0,.5);
+		border: 4px double rgba(255,255,255,.1);
+	}
+}
+
+.full-height {
+	.main-image-txt, .carousel-caption{
+		margin-top: 0;
+		top: 45%;
+	}
+}
+
+@media screen and (max-width: 1380px){
+	.main-image-txt, .carousel-caption{
+		.carousel-content{
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media screen and (max-width: @screen-media-sm){
+	.panning,
+	.zooming{
+		background-size: auto 100%;
+		.animation(none);
+	}
+
+	.main-video{
+		img{
+			display: block;
+			height:420px;
+		}
+		video{
+			height: 500px;
+			width: auto;
+		}
+		&.with-overlay:before{
+			background-image: url('@{baseurl}/mask.png');
+		}
+	}
+	.main-image-txt, .carousel-caption{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 15px;
+		left: 0;
+		.main-header{
+			font-size: 2.8em;
+		}
+		.multi-caption{
+			width: 100%;
+			padding: 0px;
+		}
+		.carousel-content{
+			width: 100%;
+			margin: 0 auto;
+			padding: 0px;
+		}
+	}
+	.with-text-box{
+		.main-image-txt, .carousel-caption{
+			width: 80%;
+			left: 0;
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+	}
+
+
+
+	.carousel .carousel-control{
+		display: none;
+		[class^='icon-'], .fa, .glyphicon {
+			font-size: 20px;
+		}
+	}
+	.carousel-caption{
+		.main-header{
+			font-size: 2.4em;
+		}
+	}
+
+	.img-responsive, .thumbnail > img, 
+	.thumbnail a > img, 
+	.carousel-inner > 
+	.item > img, 
+	.carousel-inner > .item > a > img{
+		width: auto;
+		height: 100%;
+	}
+}
+
+
+
+
+

@@ -1,0 +1,78 @@
+/*---------- 3.8 Team Page ----------*/
+
+.team-single{
+	margin-bottom: 120px;
+	z-index: -1;
+	.page-img{
+		height: 300px;
+	}
+	.team-container{
+		margin-top: -140px;
+		position: relative;
+	}
+	.team-img-wrap{
+		width: 100%;
+		padding-top: 120%; /* Aspect Ratio */
+		position: relative;
+	}
+	.team-detail{
+		margin-left: 20px;
+		.rtl &{
+			text-align: right;
+		}
+	}
+	.team-img{
+		display: block;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-color: #fff;
+		overflow: hidden;
+
+		border: 6px solid #fff;
+		.box-shadow(2px 2px 30px rgba(0,0,0,0.2));
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	.main-head{
+		color: #fff;
+		margin-top: 40px;
+		margin-bottom:45px;
+	}
+	.sub-head{
+		list-style: none;
+		margin-left: 0px;
+		margin-bottom: 30px;
+		display: table;
+		border-bottom: 1px dashed @gray-50;
+		li{
+			display: inline-block;
+			@height: 40px;
+			height: @height;
+			line-height: @height;
+			
+			margin-right: 30px;
+		}
+		.fa{
+			margin-right: 10px;
+			font-size: 20px;
+			.rtl &{
+				margin-right: 0px;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+
+@media(max-width: @screen-media-sm){
+	.team-single{
+		.main-head{
+			color: @font-color;
+		}
+	}
+}

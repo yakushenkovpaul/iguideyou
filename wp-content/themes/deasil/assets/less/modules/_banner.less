@@ -1,0 +1,38 @@
+/*---------- 2.8  Banner ----------*/
+
+.banner{
+	padding: 60px 0;
+	overflow: hidden;
+	line-height: 1.4;
+	h1, h2, h3, h4, h5, h6{
+		margin-top: 0;
+		margin-bottom: 20px !important;
+		font-weight: bold;
+		line-height: 1.4;
+	}
+	.line-box{
+		margin: 0 15px;
+		text-align: center;
+		padding: 0 30px;
+		.line-title{
+			display: table;
+			margin: -15px auto 30px;
+			padding: 0 30px;
+			letter-spacing: 1px;
+			font-size: 1.2em;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+@media screen and (max-width: @screen-media-sm){
+	.banner{
+		padding: 30px 0;
+	}
+	.container{
+		.line-box{
+			margin: 0 10px;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+
+---Downloaded files---
+The import files for: All Content were successfully downloaded!
+Initial max execution time = 300
+Files info:
+Site URL = http://iguideyou.hotdealsishere.win
+Data file = /var/www/iguideyou/html/wp-content/themes/deasil/demo/deasil.xml
+Widget file = /var/www/iguideyou/html/wp-content/themes/deasil/demo/deasil.json
+Customizer file = /var/www/iguideyou/html/wp-content/themes/deasil/demo/deasil.dat
+Redux files:
+not defined!
+
+---Importing widgets---
+Sidebar : 
+
+Search - No Title - Widget already exists
+Recent Posts - No Title - Widget already exists
+Recent Comments - No Title - Widget already exists
+Archives - No Title - Widget already exists
+Categories - No Title - Widget already exists
+Meta - No Title - Widget already exists
+
+WooCommerce Sidebar : 
+
+Product Search - Tour Search - Widget already exists
+Deasil Trip Grade - Tour Grade - Widget already exists
+Filter Products by Price - Price Filter - Widget already exists
+Filter Products by Rating - Average rating - Widget already exists
+Deasil Trip Location - Tour Location - Widget already exists
+
+Footer1 : 
+
+Custom HTML - About us - Widget already exists
+Deasil Social icons - No Title - Widget already exists
+
+Footer2 : 
+
+Navigation Menu - Quick Link - Widget already exists
+
+Footer3 : 
+
+Text - Contact - Widget already exists
+
+Footer4 : 
+
+Text - Subscribe Newsletter - Widget already exists
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!

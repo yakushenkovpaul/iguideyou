@@ -1,0 +1,185 @@
+/*---------- 2.10 Button ----------*/
+
+.btn, input[type='submit'], .button{
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  padding: 8px 15px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border: 0;
+  color: #fff;
+  .icon{
+    font-size: 12px;
+  }
+  &.btn-lg{
+    font-size: 1.6rem;
+    @height: 60px;
+    height: @height;
+    line-height: @height;
+    padding: 0 25px;
+    box-sizing: content-box;
+  }
+  &.btn-md{
+    font-size: 1.2rem;
+    @height: 40px;
+    height: @height;
+    line-height: @height;
+    padding: 0 15px;
+    box-sizing: content-box;
+  }
+  &.pull-right{
+    margin-left: 15px;
+  }
+  &.pull-left{
+    margin-right: 15px;
+  }
+  & + .btn{
+    margin-left: 15px;
+  }
+}
+
+
+.btn-default{
+  background: @gray;
+  color: #fff;
+  &:hover{
+    background: darken(@gray, 10%);
+  }
+}
+
+.btn-info{
+  background:  @info-color;
+  &:hover{
+   background: darken(@info-color, 10%);
+ }
+}
+.btn-success{
+  background: @success-color;
+  &:hover{
+   background: darken(@success-color, 10%);
+ }
+}
+.btn-warning{
+  background: @warning-color;
+  &:hover{
+   background: darken(@warning-color, 10%);
+ }
+}
+.btn-danger{
+  background: @danger-color;
+  &:hover{
+   background: darken(@danger-color, 10%);
+ }
+}
+.btn-white{
+  background: #ffffff;
+  &:hover{
+    border-color: darken(#fff, 10%);
+  }
+}
+
+
+.btn-line{
+  background: transparent;
+  border-style: solid;
+  border-width: 3px;
+  &:hover{
+    background: transparent;
+  }
+
+  &.btn-default{
+    color: @gray;
+    border-color: @gray;
+    &:hover{
+      color: darken(@gray, 10%);
+      border-color: darken(@gray, 10%);
+    }
+  }
+
+  &.btn-info{
+    color:  @info-color;
+    border-color:  @info-color;
+    &:hover{
+     color: darken(@info-color, 10%);
+     border-color: darken(@info-color, 10%);
+   }
+ }
+ &.btn-success{
+  color: @success-color;
+  border-color: @success-color;
+  &:hover{
+   color: darken(@success-color, 10%);
+   border-color: darken(@success-color, 10%);
+ }
+}
+&.btn-warning{
+  color: @warning-color;
+  border-color: @warning-color;
+  &:hover{
+   color: darken(@warning-color, 10%);
+   border-color: darken(@warning-color, 10%);
+ }
+}
+&.btn-danger{
+  color: @danger-color;
+  border-color: @danger-color;
+  &:hover{
+   color: darken(@danger-color, 10%);
+   border-color: darken(@danger-color, 10%);
+ }
+}
+&.btn-white{
+  color: #fff;
+  border-color: #fff;
+  &:hover{
+   color: darken(#fff, 10%);
+   border-color: darken(#fff, 10%);
+ }
+}
+}
+
+.input-group-btn{
+  .btn{
+    padding: 0 15px;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: top;
+  }
+}
+
+
+/*style*/
+.btn-r{
+  .btn{
+    .border-radius(60px) !important;  
+  }
+  .a.button.alt, 
+  button.button.alt, 
+  input.button.alt, 
+  #respond input#submit.alt{
+    .border-radius(60px) !important;  
+  }
+}
+.btn-rc{
+  .btn-lg{
+    .border-radius(5px) !important;
+  }
+  .btn-md, .btn{
+    .border-radius(3px) !important;
+  }
+  .btn-sm{
+    .border-radius(1px) !important;
+  }
+  .a.button.alt, 
+  button.button.alt, 
+  input.button.alt, 
+  #respond input#submit.alt{
+  .border-radius(3px) !important;
+  }
+}
+
+/*contact form 7*/
+[type='button'].wpcf7-form-control, 
+[type='submit'].wpcf7-form-control{
+  .btn;
+}

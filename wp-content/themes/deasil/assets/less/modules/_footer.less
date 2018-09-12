@@ -1,0 +1,90 @@
+/*---------- 2.32 Footer ----------*/
+
+
+#footer{
+	padding-top: 60px;
+	@height: 270px;
+	line-height: 1.6;
+	font-size: 1em;
+	h1,h2,h3,h4,h5,h6{
+		color: @gray-300;
+		position: relative;
+		margin-bottom: 30px;
+		&:after{
+			content: '';
+			height: 2px;
+			width: 30px;
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			.rtl &{
+				right: 0;
+				left: auto;
+			}
+		}
+	}
+
+	p{
+		margin-top: 15px;
+	}
+	ul{
+		margin: 15px 0px 0px;
+		padding: 0px;
+		list-style: none;
+		li{
+			margin-bottom: 2px;
+		}
+	}
+
+	.social-icon-list{
+		margin: 0;
+		ul{
+			margin-top: 5px;
+		}
+		a, a:hover{
+			color: #fff;
+		}
+	}
+
+	.copy{
+		margin-top: 50px;
+		padding: 5px 5px 8px;
+		font-size: .9em;
+		text-align: center;
+		font-weight: normal;
+		span{
+			font-size: 1.6em;
+			position: relative;
+			top: 2px;
+		}
+	}
+	input[type='text'], textarea, select{
+		width: 100%;
+	}
+	select{
+		color: @font-color;
+	}
+}
+
+
+@media screen and (max-width: @screen-media-sm){
+	#footer{
+		text-align: center;
+		h1,h2,h3,h4,h5,h6{
+			&:after{
+				left: 50%;
+				margin-left: -15px;
+				bottom: -15px;
+			}
+		}
+		.row{
+			& > div{
+				display: block;
+				padding: 10px 30px;
+			}
+		}
+		.social-icon{
+			margin: 10px auto 0;
+		}
+	}
+}

@@ -1,0 +1,165 @@
+/*---------- 1.2 Utilities ----------*/
+html.full-height{
+	height: 100%;
+}
+.deasil-body{
+	min-width: 300px;
+}
+.main-container{
+	//margin-top: 30px;
+}
+.page-container{
+	margin-top: 60px;
+	margin-bottom: 40px;
+}
+
+@media (min-width: 1200px){
+	.container {
+		width: 1200px;
+	}
+}
+.side-container, .main-container > p:first-child{
+	margin-top: 20px;
+}
+
+.container .container{
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.container-fluid{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+hr.dark{
+	border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.clearfix{
+	clear: both;
+}
+
+.disable{
+	color: @gray-100;
+}
+.pull-center{
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.tooltip-inner{
+	border-radius: 2px;
+}
+
+.italic{
+	font-style: italic;
+}
+
+.no-padding > [class*="col-"] {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.dot{
+	display: inline-block;
+	@height: 6px;
+	height: @height;
+	width: @height;
+	border-radius: @height;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: transparent;
+	background: @gray-200;
+	vertical-align: middle;
+}
+
+.text-center, .center-text{
+	text-align: center;
+}
+
+.calendar_wrap{
+	table{
+		width: 100%;
+		th, td{
+			padding:8px 0px;
+			text-align: center;
+		}
+	}
+}
+
+
+.width-500{
+	width: 500px;
+}
+
+
+.generate-padding-class(@n, @i:1) when (@i =< @n){
+	@j : @i*10;
+	.padding-@{j}{
+		padding: @i*10px;
+	}
+	.padding-0-@{j}{
+		padding: 0 @i*10px;
+	}
+	.generate-padding-class(@n, (@i + 1));
+}
+.generate-padding-class(20);
+@media screen and (max-width: 1000px){
+	.generate-padding-class(@n, @i:1) when (@i =< @n){
+		@j : @i*10;
+		.padding-@{j}{
+			padding: @i*5px;
+		}
+		.padding-0-@{j}{
+			padding: 0 @i*5px;
+		}
+		.generate-padding-class(@n, (@i + 1));
+	}
+	.generate-padding-class(20);
+}
+
+.generate-margin-class(@n, @i:1) when (@i =< @n){
+	@j : @i*10;
+	.margin-@{j}{
+		margin: @i*10px;
+	}
+	.margin-0-@{j}{
+		margin: 0 @i*10px;
+	}
+	.generate-margin-class(@n, (@i + 1));
+}
+.generate-margin-class(20);
+@media screen and (max-width: 1000px){
+	.generate-margin-class(@n, @i:1) when (@i =< @n){
+		@j : @i*10;
+		.margin-@{j}{
+			margin: @i*5px;
+		}
+		.margin-0-@{j}{
+			margin: 0 @i*5px;
+		}
+		.generate-margin-class(@n, (@i + 1));
+	}
+	.generate-margin-class(20);
+}
+
+
+
+@media screen and (max-width: @screen-sm){
+	.site-content{
+		padding-top: 0px;
+	}
+	.container-fluid{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.page-container{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}

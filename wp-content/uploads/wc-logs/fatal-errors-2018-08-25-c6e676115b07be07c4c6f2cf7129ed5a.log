@@ -1,0 +1,44 @@
+2018-08-25T11:22:24+00:00 CRITICAL Uncaught Error: Call to undefined function split() in /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php:90
+Stack trace:
+#0 /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php(529): wp_native_dashboard_is_rtl_language('en_US')
+#1 /var/www/iguideyou/html/wp-admin/includes/template.php(1073): wp_native_dashboard->on_print_metabox_installed_i18n(NULL, Array)
+#2 /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php(611): do_meta_boxes(Object(WP_Screen), 'normal', NULL)
+#3 /var/www/iguideyou/html/wp-includes/class-wp-hook.php(286): wp_native_dashboard->on_show_page('')
+#4 /var/www/iguideyou/html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 /var/www/iguideyou/html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#6 /var/www/iguideyou/html/wp-admin/admin.php(224): do_action('settings_page_w...')
+#7 /var/www/iguideyou/html/wp-admin/options-general.php(10): require_once('/var/www/ig
+
+2018-08-25T11:23:07+00:00 CRITICAL Uncaught Error: Call to undefined function split() in /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php:90
+Stack trace:
+#0 /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php(529): wp_native_dashboard_is_rtl_language('en_US')
+#1 /var/www/iguideyou/html/wp-admin/includes/template.php(1073): wp_native_dashboard->on_print_metabox_installed_i18n(NULL, Array)
+#2 /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php(611): do_meta_boxes(Object(WP_Screen), 'normal', NULL)
+#3 /var/www/iguideyou/html/wp-includes/class-wp-hook.php(286): wp_native_dashboard->on_show_page('')
+#4 /var/www/iguideyou/html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 /var/www/iguideyou/html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#6 /var/www/iguideyou/html/wp-admin/admin.php(224): do_action('settings_page_w...')
+#7 /var/www/iguideyou/html/wp-admin/options-general.php(10): require_once('/var/www/ig
+
+2018-08-25T11:23:27+00:00 CRITICAL Uncaught Error: Call to undefined function split() in /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php:90
+Stack trace:
+#0 /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php(529): wp_native_dashboard_is_rtl_language('en_US')
+#1 /var/www/iguideyou/html/wp-admin/includes/template.php(1073): wp_native_dashboard->on_print_metabox_installed_i18n(NULL, Array)
+#2 /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php(611): do_meta_boxes(Object(WP_Screen), 'normal', NULL)
+#3 /var/www/iguideyou/html/wp-includes/class-wp-hook.php(286): wp_native_dashboard->on_show_page('')
+#4 /var/www/iguideyou/html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 /var/www/iguideyou/html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#6 /var/www/iguideyou/html/wp-admin/admin.php(224): do_action('settings_page_w...')
+#7 /var/www/iguideyou/html/wp-admin/options-general.php(10): require_once('/var/www/ig
+
+2018-08-25T11:24:10+00:00 CRITICAL Uncaught Error: Call to undefined function split() in /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php:90
+Stack trace:
+#0 /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php(529): wp_native_dashboard_is_rtl_language('en_US')
+#1 /var/www/iguideyou/html/wp-admin/includes/template.php(1073): wp_native_dashboard->on_print_metabox_installed_i18n(NULL, Array)
+#2 /var/www/iguideyou/html/wp-content/plugins/wp-native-dashboard/wp-native-dashboard.php(611): do_meta_boxes(Object(WP_Screen), 'normal', NULL)
+#3 /var/www/iguideyou/html/wp-includes/class-wp-hook.php(286): wp_native_dashboard->on_show_page('')
+#4 /var/www/iguideyou/html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 /var/www/iguideyou/html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#6 /var/www/iguideyou/html/wp-admin/admin.php(224): do_action('settings_page_w...')
+#7 /var/www/iguideyou/html/wp-admin/options-general.php(10): require_once('/var/www/ig
+

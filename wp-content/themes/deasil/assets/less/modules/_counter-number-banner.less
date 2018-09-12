@@ -1,0 +1,41 @@
+/*---------- 2.9  Counter Number Banner ----------*/
+
+.counter-div{
+	padding: 50px 0;
+	text-align: center;
+	&.dark{
+		background: rgba(0,0,0,.05);
+	}
+	p{
+		letter-spacing: 1px;
+	}
+	.icon-font{
+		font-size: 4em;
+		display: block;
+	}
+	.counter{
+		font-size: 4em;
+		font-weight: bold;
+		font-family: @head-font;
+		text-align: center;
+	}
+
+	/*variations*/
+	&.gray{
+		background: fade(@gray-50, 90%);
+		color: @gray-700;
+		.counter{
+			color:  @gray-900;
+		}
+		&.dark{
+			background: fade(@gray-100, 90%);
+		}
+	}
+
+}
+
+@media screen and (max-width: @screen-md){
+	.counter-div{
+		font-size: .8em;
+	}
+}

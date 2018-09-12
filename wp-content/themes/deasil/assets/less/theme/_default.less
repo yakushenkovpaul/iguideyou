@@ -1,0 +1,1222 @@
+/*---------- 1.1 Base/_normalize ----------*/
+body{
+	font-family: @body-font;
+	color: @font-color;
+	font-size: @font-size-base !important;
+}
+
+.deasil-body{
+
+	a.btn,
+	a.btn:hover
+	{
+		color: #fff;
+	}
+	a.button, 
+	button.button, 
+	input.button, 
+	#respond input#submit{
+		background: @primary-color;
+	}
+
+	h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-bar, .nav-bar a{
+		font-family: @head-font;
+	}
+
+	a{
+		color: @primary-color;
+		&:hover, &:focus{
+			color: @primary-700;
+		}
+	}
+
+	/*---------- 2.2 Modules/_navigation ----------*/
+	.nav-menu{
+		.icon-bar{
+			background: contrast(@base-color);
+		}
+		&.base{
+			.navbar{
+				background: @base-color;
+			}
+		}
+		&.overlay{
+			border-bottom: 0px;
+			.navbar{
+				background: fade(@base-color, 30%);
+			}
+		}
+		.navbar{
+			&.transparent{
+				background: transparent;
+			}
+			.navbar-brand{
+				color: @base-contrast;
+			}
+		}
+
+		.default-menu > ul{
+			& > li {
+				@media screen and (min-width: @screen-md) {
+					&:hover{
+						& > a{
+							border-bottom: 4px solid @primary-color;
+						}
+					}
+				&.open{ //li.open
+					& > a, & > a.dropdown-toggle, & > a:focus, & > a:hover, *[class^="icon"]{
+						border-bottom: 4px solid @primary-color;
+					}
+				}
+			}
+			& > a{
+				font-family: @body-font;
+				font-weight: normal;
+				color: #fff;
+				&:focus, &:hover{
+					*[class^="icon"]{
+						color: @primary-color;
+					}
+				}
+			}
+			
+
+			.dropdown-menu, 
+			.children, 
+			.sub-menu{
+				background: fade(@base-color, 80%);
+				color: @primary-color;
+				a{	
+					color: @base-contrast;
+					&:hover{
+						color: @primary-color;
+					}
+				}
+				h5{
+					border-bottom: 1px solid fade(lighten(@base-color, 5%), 10%);
+				}
+
+				ul{
+					li.hor-line{
+						&:after{
+							background: fade(@primary-color, 30%);
+						}
+					}
+				}
+
+				&.cart-menu{
+					background: lighten(@base-color, 5%);
+					color: contrast(lighten(@base-color, 5%));
+					li{
+						border-bottom: 1px solid fade(contrast(lighten(@base-color, 5%)), 10%);
+						[class^='icon-'], .fa, .glyphicon {
+							&:hover{
+								color: @primary-color;
+							}
+						}
+						.delete{
+							&:hover{
+								color: @primary-color;
+							}
+						}
+					}
+				}
+			}
+			&.deasil-mega-menu{
+				.dropdown-menu{
+					.dropdown-menu{
+						&:before{
+							background: @primary-color;
+						}
+					}
+				}
+			}
+			
+			//li
+			&:not(.deasil-mega-menu) {
+				.dropdown-menu, 
+				.children, 
+				.sub-menu{
+					li{
+						border-bottom: 1px solid  fade(contrast(@base-color), 5%);
+						&:hover{
+							background: @base-600;
+						}
+					}
+				}
+			}
+
+		}
+	}
+	&.fixed{
+		.navbar{
+			background: @base-color;
+			&.transparent{
+				background: @base-color;
+			}
+		}
+		.navbar-toggle{
+			.icon-bar{
+				background-color:@primary-color;
+			}
+		}
+		.default-menu > ul{
+			& > li {
+				& > a{
+					color: @base-contrast;
+				}
+			}
+		}
+	}
+}
+
+
+
+/*---------- 2.4 Modules/_carousel ----------*/
+.carousel{
+	.carousel-indicators li{
+		background:  #ffffff;
+		&.active{
+			background: @primary-color;
+		}
+	}
+}
+
+.main-img{
+	&.no-bg{
+		background: @primary-700;
+	}
+}
+
+.main-image-txt, .carousel-caption{
+	.main-header{
+		font-family: @head-font;
+		&:after{
+			border-top: 1px solid @primary-color;
+		}
+	}
+	hr{
+		border-color: @primary-color;
+	}
+	.sub-header{
+		font-family: @body-font;
+	}
+}
+
+
+
+/*---------- 2.5 Modules/_page-header ----------*/
+.page-img{
+	background-color: @primary-600;
+	.main-head{
+		font-family: @head-font;
+	}
+	.sub-head{
+		font-family: @body-font;
+	}
+}
+
+
+
+
+/*---------- 2.6 Modules/_section ----------*/
+.section, main{
+	&.base{
+		.section-title{
+			color: @primary-contrast;
+			h3:after{
+				border-top: 5px solid @primary-contrast;
+			}
+		}
+	}
+	&.base{
+		background: @base-color;
+		color: fade(@base-contrast, 70%);
+	}
+	&.primary{
+		background: @primary-color;
+		color: @primary-contrast;
+	}
+}
+
+
+
+/*---------- 2.7 Modules/_headline ----------*/
+.main-title{
+	h1, h2 ,h3 ,h4 ,h5 ,h6{
+		&:after{
+			border-top: 1px solid  @primary-color;
+		}
+	}
+
+	&.primary{
+		color: @primary-color;
+	}
+	&.base{
+		color: @base-color;
+	}
+}
+.section-title{
+	font-family: @head-font;
+	h1, h2, h3, h4, h5, h6{
+		border-color: @primary-color;
+	}
+}
+
+
+/*---------- 2.8 Modules/_banner ----------*/
+.banner{
+	.line-box{
+		border: 2px solid fade(@primary-color, 80%);
+		.line-title{
+			background: @body-bg;
+			font-family: @head-font;
+		}
+	}
+	&.white{
+		background: #fff;
+		color: @font-color;
+	}
+	&.base{
+		background: @base-color;
+		color: @base-contrast;
+		.line-title{
+			background: @base-color;
+		}
+	}
+	&.primary{
+		background: @primary-color;
+		color: @primary-contrast;
+		.line-box{
+			border: 2px solid fade(@base-color, 30%);
+		}
+		.line-title{
+			background: @primary-color;
+		}
+	}
+	&.gray{
+		background: @gray-50;
+		color: @gray-900;
+		.line-box{
+			border: 2px solid fade(@primary-color, 30%);
+		}
+		.line-title{
+			background: @gray-50;
+		}
+	}
+}
+
+
+/*---------- 2.9 Modules/_counter-number-banner ----------*/
+.counter-div{
+	color: @primary-color;
+	.icon-font{
+		color: @primary-color;
+	}
+	.counter{
+		font-family: @head-font;
+	}
+
+	/*variations*/
+	&.transparent{
+		color: @font-color;
+		.icon-font{
+			color: @font-color;
+		}
+		.counter{
+			color:  @font-color;
+		}
+	}
+
+	&.base{
+		background: @base-color;
+		color: fade(@base-contrast, 80%);
+		.icon-font{
+			color: @primary-500;
+		}
+		.counter{
+			color:  @base-contrast;
+		}
+		&.light{
+			background: @base-300;
+		}
+	}
+	&.primary{
+		background: fade(@primary-color, 90%);
+		color: #ffffff;
+		.icon-font{
+			color: #ffffff;
+		}
+		&.light{
+			background: @primary-300;
+		}
+	}
+}
+
+.counter-div{
+	.counter{
+		font-family: @head-font;
+	}
+
+	/*variations*/
+	&.gray{
+		color: @primary-500;
+	}
+}
+
+
+
+/*---------- 2.10 Modules/_buttons ----------*/
+.btn, input[type='submit'], .button{
+	font-family: @head-font;
+}
+
+input[type='submit'], .btn-primary{
+	background: @primary-color;
+	color: #fff;
+	&:hover, &:focus{
+		background: @primary-700;
+		color: #fff;
+	}
+}
+.btn-contrast{
+	background: @primary-contrast;
+	&:hover, &:focus{
+		background: darken(@primary-contrast, 10%);
+	}
+}
+.btn-base{
+	background: @base-color;
+	&:hover, &:focus{
+		background: @base-700;
+	}
+}
+.btn-white{
+	color: @primary-color;
+}
+
+.btn-line{
+	background: transparent !important;
+	&.btn-primary{
+		color: @primary-color;
+		border-color: @primary-color;
+		&:hover{
+			color: darken(@primary-color, 10%);
+			border-color: darken(@primary-color, 10%);
+		}
+	}
+	&.btn-base{
+		color: @base-color;
+		border-color: @base-color;
+		&:hover{
+			color: darken(@base-color, 10%);
+			border-color: darken(@base-color, 10%);
+		}
+	}
+	&.btn-contrast{
+		color: @primary-contrast;
+		border-color: @primary-contrast;
+		&:hover{
+			color: darken(@primary-contrast, 10%);
+			border-color: darken(@primary-contrast, 10%);
+		}
+	}
+}
+
+
+/*---------- 2.12 Modules/_form ----------*/
+.form-control{
+	&:focus {
+		border-color: fade(@primary-color, 50%);
+	}
+}
+.input-group{
+	.input-group-addon{
+		color: @primary-color;
+	}
+}
+
+
+
+
+
+/*---------- 2.13 Modules/_table ----------*/
+.table-btn-wrap{
+	#table-right, #table-left{
+		color: @primary-contrast;
+		background: @primary-color;;
+		border: 1px solid @primary-color;;
+	}
+}
+
+
+
+/*---------- 2.14 Modules/_breadcrumb ----------*/
+.breadcrumb{
+	li{
+		a{
+			&:hover{
+				color: @primary-color;
+			}
+		}
+	}
+}
+
+/*---------- 2.18 Modules/_blockquotes ----------*/
+blockquote{
+	footer{
+		color: @primary-600;
+	}
+}
+
+
+/*---------- 2.19 Modules/_pagination ----------*/
+.pagination{
+	li.active{
+		a, span{
+			background: @primary-color;
+			color: @primary-contrast;
+		}
+	}
+}
+
+
+/*---------- 2.20 Modules/_social-icons ----------*/
+.social{
+	margin-bottom: 15px;
+	.icon{
+		background: @primary-color;
+		color: #ffffff;
+		&:hover,
+		&:focus{
+			background: @primary-hover;
+		}
+	}
+}
+
+.social-icon-list{
+	li{
+		a{
+			background: @primary-color;
+			color: #ffffff;
+			font-family: @head-font;
+			&:hover{
+				background: @primary-600;
+			}
+		}
+	}
+
+}
+
+
+
+/*---------- 2.21 Modules/_sort-bar ----------*/
+.toogle-view{
+	.icon{
+		&:hover, &.active{
+			background: @primary-color;
+			color: #ffffff;
+			border: 1px solid @primary-color;
+		}
+	}
+}
+
+
+/*---------- 2.22 Modules/_step-timeline ----------*/
+.itinerary-steps{
+	[class^='icon-'], .fa, .glyphicon, .no-icon {
+		background: @primary-contrast;
+		color: @primary-color;
+	}
+	&.primary{
+		[class^='icon-'], .fa, .glyphicon {
+			background: @primary-color;
+			color: @primary-contrast;
+			border-color: @primary-900;
+		}
+	}
+	&.base{
+		[class^='icon-'], .fa, .glyphicon {
+			background: @base-color;
+			border-color: @base-50;
+			color: @primary-color;
+		}
+	}
+}
+
+.steps{
+	&.primary{
+		.index{
+			background: @primary-color;
+			color: @primary-contrast;
+		}
+	}
+	&.base{
+		.index{
+			background: @base-color;
+			color: @base-contrast;
+		}
+	}
+}
+
+.timeline{
+	&.primary{
+		.time-module{
+			.index{
+				[class^='icon-']{
+					background: @primary-color;
+					color: @primary-contrast;
+				}
+			}
+		}
+	}
+	&.base{
+		.time-module{
+			@pop-color: fade(@base-color, 10%);
+			.index{
+				[class^='icon-']{
+					background: @base-color;
+					color: @base-contrast;	
+				}
+			}
+		}
+	}
+}
+
+
+
+/*---------- 2.23 Modules/_feature-list ----------*/
+.circle-icon, .square-icon, .diamond-icon{
+	background: @primary-color;
+	&.line{
+		border-color:  @primary-color;
+		[class^='icon-'], .fa, .glyphicon {
+			color: @primary-color;
+		}
+	}
+} 
+.chat-icon{
+	background: @primary-color;
+	&:before{
+		border-top-color: @primary-color;
+	}
+	&.line{
+		border-color:  @primary-color;
+		[class^='icon-'] {
+			color: @primary-color;
+		}
+	}
+}
+
+/*---------- 2.24 Modules/_icons ----------*/
+.icon{
+	&-primary{
+		color: @primary-color;
+	}
+	&-base{
+		color: @base-color;
+	}
+}
+
+/*---------- 2.25 Modules/_testimonial ----------*/
+.testimonial-wrap{
+	&.bg-image{
+		&:before{
+		//Twitter Bootstrap's mixin  defined on mixin.less
+		#gradient.vertical(@start-color : fade(@primary-900, 80%); @end-color : #000; @start-percent : 0%; @end-percent : 100%);
+	}
+}
+&.primary{
+	background: @primary-color;
+	color: @primary-contrast;
+	.testimonial-item > div{
+		border-color: @primary-400;
+	}
+}
+
+&.base{
+	background: @base-color;
+	color: @base-contrast;
+	.testimonial-item > div{
+		border-color: @base-300;
+	}
+	p{
+		color: fade(@base-contrast, 80%);
+	}
+}
+
+}
+
+.testimonial{
+	.name{
+		font-family: @head-font;
+	}
+	&.dark{
+		outline: 1px solid fade(@primary-900, 20%);
+		&:before{
+			/*Twitter Bootstrap's mixin  defined on mixin.less*/
+			#gradient.vertical(@start-color : @primary-700; @end-color : #000; @start-percent : 0%; @end-percent : 100%);
+		}
+	}
+}
+
+.testimonial{
+	.owl-nav [class*='owl-']{
+		background: @primary-color;
+		&:hover{
+			background: @base-color;
+		}
+	}
+	.owl-nav {
+		[class*='owl-'] {
+			&:hover {
+				background: @primary-600;
+			}
+		}
+	}
+
+	.owl-dots {
+		.owl-dot {
+			span {
+				background: @primary-color;
+			}
+			&.active span, &:hover span {
+				background: @primary-contrast;
+			}
+		}
+	}
+}
+
+/*---------- 2.28 Modules/_search-bar ----------*/
+.search-bar{
+	background: @base-color;
+	color: @base-contrast;
+	label{
+		color: f@base-contrast;
+	}
+	.form-control{
+		border: 1px solid fade(@base-contrast, 10%);
+	}
+}
+
+
+
+/*---------- 2.29 Modules/_sidebar ----------*/
+.sidebar{
+	.btn-group[data-toggle="buttons"]{
+		.btn-default{
+			&.active{
+				color: @primary-color;
+			}
+		}
+	}
+}
+
+
+/*---------- 2.31 Modules/_image-gallery ----------*/
+#trip-gallery{
+	.trip-gallery-item{
+		.hover-overlay{
+			background: fade(@primary-900, 80%);
+			[class^="icon-"]{
+				background: @primary-color;
+			}
+		}
+	}
+
+	.owl-nav{
+		.owl-prev, .owl-next{
+			background: @base-color;
+		}
+	}
+
+}
+
+/*---------- 2.32 Modules/_footer ----------*/
+#footer{
+	background: @base-color;
+	color: fade(@base-contrast, 80%);
+	h1,h2,h3,h4,h5,h6{
+		color: fade(@base-contrast, 80%);
+		&:after{
+			background: @primary-color;
+		}
+	}
+	a{
+		color: fade(@base-contrast, 80%);
+		&:hover{
+			color: @primary-color;
+		}
+	}
+	.copy{
+		background: fade(@base-contrast, 3%);
+		color: fade(@base-contrast, 60%);
+	}
+}
+
+
+
+/*---------- 2.33 location Carousel ----------*/
+.location-carousel{
+	.location-item{
+		&:before{
+			background: fade(@primary-900, 80%);
+		}
+		&:after{
+			background: @primary-color;
+			color: #ffffff;
+		}
+	}
+	.location-term{
+		font-family: @head-font;
+	}
+}
+
+
+
+
+
+
+/*---------- 3.2 Partials/_trip-grid ----------*/
+.single-item{
+	.item-img{
+		.item-overlay{
+			color: #ffffff;
+			background: fade(@primary-900, 80%);
+			[class^="icon-"], .fa{
+				background: @primary-color;
+			}
+			a{
+				color: #ffffff;
+			} 
+		}
+	}
+}
+
+
+
+/*---------- 3.3 Partials/_trip-detail ----------*/
+
+ul.trip-overview{
+	[class^='icon-'], .fa, .glyphicon {
+		color: @primary-color;
+	}
+}
+
+
+/*---------- 3.4 Partials/_blog-page ----------*/
+.post-list{
+	.post-img{
+		.item-overlay{
+			color: #ffffff;
+			background: fade(@primary-900, 80%);
+			[class^="icon-"], .fa{
+				background: @primary-color;
+			}
+			a{
+				color: #ffffff;
+			} 
+		}
+	}
+	.post-summary{
+		.post-title{
+			a{
+				color: @font-color;
+				&:hover{
+					color: @primary-color;
+				}
+			}
+		}
+		.byline{
+			color: @gray-300;
+			a{
+				color: @gray-300;
+				&:hover{
+					color: @primary-color;
+				}
+			}
+		}
+	}
+}
+
+.post-single{
+	.page-img-txt {
+		margin-top: 50px;
+		a{
+			color: #fff;
+			&:hover{
+				color: @primary-100;
+			}
+		}
+		.author, .byline{
+			color: #fff;
+		}
+	}
+
+	.prev-next-post{
+		.prev-next-img{
+			background-color: @gray-50;
+			color: @primary-color;
+		}
+	}
+}
+
+.tag-wrap{
+	a{	
+		border:1px solid #fff;	
+		color: #fff;;
+		&:hover{
+			background: @primary-color;
+			border-color: @primary-color; 
+			color: #fff !important;
+		}
+	}
+}
+
+.share-box{
+	background: fade(@gray-50, 50%);
+	border: 1px solid @gray-50;
+	.social-icon{
+		background: @gray-300;
+		color: #fff;
+	}
+}
+
+
+
+
+/*---------- 3.5 Partials/_page-404 ----------*/
+.page-404{
+	.clip-text_one {
+		text-shadow: 0 0  1px fade(@primary-600, 60%);
+	}
+	.search-field{
+		&:before{
+			background: @primary-color;
+		}
+	}
+}
+
+
+
+/*---------- 3.6 Partials/_comming-soon ----------*/
+.comming-soon{
+	color: #fff;
+	&:before{
+    //twitter bootstrap mixin
+    #gradient.horizontal(@start-color : #000; @end-color : @primary-900; @start-percent : 0%; @end-percent : 100%);
+}
+
+.text-box{
+	.big-txt{
+		font-family: @head-font;
+	}
+}
+
+.search-field{
+	&:before{
+		background: @primary-color;
+	}
+}
+}
+
+
+
+
+/*---------- 4.1 Partials/_lightbox ----------*/
+.lb-prev, .lb-next {
+	background: fade(@base-color, 30%);
+}
+.lb-nav a{
+	&:hover{
+		background: @base-color;
+		color: @primary-color;
+	}
+}
+
+/*---------- 4.2 Vendor/_contact-form-7 ----------*/
+[type='button'].wpcf7-form-control, 
+[type='submit'].wpcf7-form-control{
+	.btn-primary;
+}
+
+
+
+/*---------- 4.4 Vendors/_jquery-ui ----------*/
+.ui-datepicker{
+	.ui-datepicker-header{
+		background: fade(@primary-color, 10%);
+		color: @font-color;
+		padding: 2px 0;
+		.ui-state-hover{
+			background: fade(@primary-color, 20%);
+		}
+	}
+	td{
+		.ui-state-highlight,
+		.ui-state-hover{
+			background: @primary-color;
+		}
+	}
+}
+
+
+.ui-dialog{
+	.ui-dialog-buttonset{
+		button, input[type="button"], input[type="submit"]{
+			background: @primary-color;
+			border: 1px solid @primary-color;
+			color: #ffffff;
+		}
+	}
+}
+
+
+/*ui-dialog*/
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button {
+	color: #ffffff;
+	background-color: @primary-color;
+	border-color: @primary-600;
+	&.ui-state-hover{
+		color: #ffffff;
+		background-color: @primary-600;
+		border-color: @primary-700;
+	}
+}
+
+
+/*ui-tabs*/
+.ui-tabs {
+	.ui-tabs-nav{
+		li a {
+			&:hover{
+				background-color: @primary-color;
+				color: @primary-contrast;
+			}
+		}
+	}
+}
+/*bootstrap-select*/
+.bootstrap-select {
+	.btn-default{
+		&.dropdown-toggle.bs-placeholder:hover{
+			color: @primary-contrast;
+			background: @primary-color;
+			border-color: @primary-600;
+		}
+	}
+
+	.dropdown-menu > li > a:hover{
+		background: @primary-color;
+		color: @primary-contrast;
+	}
+}
+
+/*ui-slider*/
+.ui-slider{
+	background: @primary-800 !important;
+	.ui-slider-handle{
+		background: @primary-600 !important;
+	}
+	.ui-slider-range{
+		background: @primary-500 !important;
+	}
+}
+}
+
+
+@media screen and (max-width: @screen-media-sm) {
+	.deasil-body{
+		.nav-menu{
+			.navbar{
+				background: @base-color !important;
+			}
+			.nav {
+				& > li {
+					border-bottom: 1px solid fade(@base-contrast, 5%);
+				}
+			}
+
+			&.fixed .nav > li > a{
+				color: @base-contrast;
+				&:focus,
+				&:hover{
+					color: @base-contrast;
+				}
+			}
+		}
+	}
+}
+
+
+
+/*---------- Miscellanous/woocommerce ----------*/
+.onsale {
+	background-color: @primary-color !important;
+	color: #ffffff;
+	&:before, &:after {
+		background: @primary-color !important;
+	}
+}
+
+.woocommerce{
+	.deasil-body{
+		div.product{
+			.woocommerce-tabs{
+				ul.tabs{
+					border-bottom: 5px solid  @primary-700;
+					li{ 
+						a{
+							font-family: @head-font;
+							&:hover{
+								color: @primary-color;
+								&:after{
+									background: @primary-color;
+								}
+							}
+						}
+						&.active{
+							a{
+								background: @primary-color;
+								color: #ffffff;
+								border:1px solid @primary-600;
+								border-bottom: none; 
+							}
+
+						}
+					}
+				}
+			}
+		}
+		.onsale {
+			background-color: @primary-color;
+			color: #ffffff;
+			&:before, &:after {
+				background: @primary-color;
+			}
+		}
+
+		.widget_product_search{
+			.search-field{
+				&:focus{
+					border-color: @primary-color;
+				}
+			}
+			[type='submit']{
+				color: @primary-contrast;
+				background-color: @primary-color;
+			}
+		}
+
+		/*-main woocommerce-*/
+		p.demo_store {
+			background-color: @primary;
+			color: @primarytext;
+			a {
+				color: @primarytext;
+			}
+		}
+
+		.woocommerce-breadcrumb {
+			a {
+				&:hover{
+					color: @primary-color;
+				}
+			}
+		}
+
+		nav.woocommerce-pagination ul li span.current, 
+		nav.woocommerce-pagination ul li a:hover, 
+		nav.woocommerce-pagination ul li a:focus {
+			background: @primary-color;
+			color: #ffffff;
+		}
+
+		.main-image-txt, .carousel-caption{
+			.onsale {
+				background: @primary-500;
+				color: #ffffff;
+				&:before, &:after {
+					background: @primary-500;
+				}
+			}
+		}
+
+		a.button,
+		button.button,
+		input.button,
+		#respond input#submit {	 	
+			color: #ffffff;
+			background-color: @primary-color;
+			&:hover {
+				background-color: @primary-700;
+				text-decoration: none;
+				background-image: none;
+				color: #fff;
+			}
+			&.alt {
+				background-color: @primary;
+				color: #ffffff;
+				-webkit-font-smoothing: antialiased;
+
+				&:hover {
+					background-color: @primary - #111;
+					color: @primarytext;
+				}
+
+				&.disabled,
+				&:disabled,
+				&:disabled[disabled],
+				&.disabled:hover,
+				&:disabled:hover,
+				&:disabled[disabled]:hover {
+					background-color: @primary;
+					color: @primary-contrast;
+				}
+			}
+
+			&:disabled,
+			&.disabled,
+			&:disabled[disabled] {
+				color: @primary-contrast;
+				cursor: not-allowed;
+				opacity: 0.5;
+
+				&:hover {
+					color: inherit;
+					background-color: @secondary;
+				}
+			}
+		}
+
+		.widget_price_filter {
+			.ui-slider .ui-slider-handle {
+				background-color: @primary-600 !important;
+				border: 1px solid @primary-600 !important;
+			}
+			.ui-slider .ui-slider-range {
+				background-color: @primary !important;
+			}
+
+			.price_slider_wrapper .ui-widget-content {
+				background-color: @primary - #444 !important;
+			}
+		}
+
+		.woocommerce-message,
+		.woocommerce-error,
+		.woocommerce-info {
+			background-color: @gray-50;
+			color: @secondarytext;
+			border-top: 0px;
+		}
+	}
+}
+
+
+.woocommerce nav.woocommerce-pagination ul li span.current, 
+.woocommerce nav.woocommerce-pagination ul li a:hover, 
+.woocommerce nav.woocommerce-pagination ul li a:focus{
+	background: @primary-color !important;
+	color: #ffffff;
+}

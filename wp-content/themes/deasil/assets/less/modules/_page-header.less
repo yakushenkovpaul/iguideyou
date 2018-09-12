@@ -1,0 +1,92 @@
+/*---------- 2.5  Page Header ----------*/
+
+.page-img{
+    width: 100%;
+    margin: 0 0 30px;
+    padding: 180px 0 90px;
+    background-repeat:  no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    &:before{
+        content: '';
+        height: 100%;
+        width: 100%;
+        background-image: url('@{baseurl}/mask.png');
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .page-img-txt{
+        margin-bottom: 0px;
+        h1, h2, h3, h4, h5, h6{
+            text-transform: uppercase;
+            margin: 0px;        
+            span{
+                font-size: 1em;
+                display: block;
+            }
+        }
+        .term-description{
+            margin-top: 15px;
+            font-weight: 200;
+            font-size: 1.1em;
+        }
+    }
+
+    .main-head{
+        font-size: 3.2em;
+        font-weight: bold;
+        margin: 0px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        -ms-word-wrap: break-word;
+            word-wrap: break-word;
+        &.archive-head{
+          &:first-word{
+            font-size: 1em;
+            font-style: italic;
+          }
+        }
+    }
+    .sub-head{
+        color: @gray-50;
+    }
+
+
+    & > div{
+        position: relative;
+        z-index: 10;
+    }
+}
+
+
+.static-menu{
+    .page-img{
+        padding: 90px 0;
+    }
+}
+.nav-menu.base + .site-content{
+    .page-img{
+        padding: 90px 0;
+    }
+}
+
+@media screen and (max-width: @screen-sm){
+    .page-img{
+        padding: 30px 0; 
+        .main-head{
+            font-size: 2.6em;
+            margin: 10px 0;
+        }
+    }
+    .static-menu{
+        .page-img{
+            padding: 30px 0;
+        }
+    }
+}

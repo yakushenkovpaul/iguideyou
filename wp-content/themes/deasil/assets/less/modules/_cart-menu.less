@@ -1,0 +1,100 @@
+/*---------- 2.34 Cart Menu ----------*/
+
+.cart-menu-wrap{
+ width: 360px;
+ right: 0px !important;
+ left: auto !important;
+}
+table.cart-menu{
+  width: 100%;
+  color: #fff !important;
+  border: 0px;
+  margin-bottom: 0px;
+  th, td{
+    border: 0px;
+    &:first-child{
+      padding-left: 10px;
+    }
+  }
+  .product-quantity{
+    max-width: 50px;
+  }
+  .quantity .qty{
+    width: 40px;
+    color: @font-color;
+  }
+  .cross{
+    color: @gray-300;
+  }
+  .product-price{
+    min-width: 100px;
+    text-align: right;
+    padding-right: 15px;
+  }
+  tbody{
+    width: 100%;
+    tr:last-child td{
+      border-top: 1px solid rgba(255,255,255,.05);
+    }
+  }
+  td{
+    vertical-align: middle;
+    padding: 5px;
+  }
+  a{
+    padding: 0px !important;
+  }
+  .product-remove{
+    & > a{
+      color: #fff !important;
+      background: @danger-color !important;
+      display: inline-block;
+      @height: 20px;
+      height: @height;
+      line-height: @height;
+      width: @height;
+      text-align: center;
+      .border-radius(@height);
+    }
+  }
+  .product-thumbnail{
+    img{
+      @height: 40px;
+      height: @height !important;
+      width: @height !important;
+    }
+  }
+  .product-name{
+    a{
+      display: block;
+      padding-top: 0px !important;
+    }
+  }
+  dt.variation-Date{
+    display: none !important
+  }
+  .variation,
+  .variation-Date{
+    margin: 0px !important;
+  }
+  a.btn-view{
+    color: @primary-contrast !important;
+    display: table !important;
+    margin: 15px auto !important;
+  }
+}
+
+.nav-menu .default-menu > li {
+  table.cart-menu .product-remove{
+    & > a{
+      color: #fff !important;
+      background: @danger-color !important;
+    }
+  }
+}
+
+@media screen and (max-width:  @screen-media-sm){
+  table.cart-menu{
+   width: 100%;
+ }
+}

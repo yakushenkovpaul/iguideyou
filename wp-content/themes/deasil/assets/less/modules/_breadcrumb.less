@@ -1,0 +1,35 @@
+/*---------- 2.14 Breadcrumb ----------*/
+
+.breadcrumb{
+  display: inline-block;
+  margin: 0px;
+  padding: 0;
+  background: none;
+  float: right;
+  position: relative;
+  .icon-home, .fa{
+    font-size: 20px;
+  }
+  li{
+   @height: 30px;
+   height: @height;
+   line-height: @height;
+   float: left;
+   display: inline-block;
+ }
+}
+
+
+.page-img .breadcrumb{
+  margin-top: 20px;
+  a{
+    color: #fff;
+  }
+}
+@media screen and (max-width: @screen-media-sm){
+  .breadcrumb{
+    float: left;
+    padding: 15px 0;
+    margin:  0;
+  }
+}

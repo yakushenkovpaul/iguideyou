@@ -1,0 +1,99 @@
+/*---------- 2.3 Comments ----------*/
+
+
+.comment-form-comment{
+    label{
+        display: block;
+    }
+}
+
+/*comment on single blog page*/
+.comments-area{
+    margin-top:15px;
+    clear: both;
+    .comment-body{
+        margin-bottom: 15px;
+        p{
+            margin-left: 40px;
+        }
+    }
+
+    .section-title{
+        margin-bottom: 15px;
+    }
+
+    .comment-author {
+        height: 24px;
+        img{
+            margin-right: 10px;
+            border-radius: 30px;
+            float: left;
+        }
+    }
+
+    .says{
+        font-style: italic;
+        color: @gray-400;
+    }
+    .comment-metadata{
+        font-size: .8em;
+        margin-left: 43px;
+        margin-top: -4px;
+    }
+    .comment-content{
+        margin-left: 45px; 
+        margin-top: 10px;
+        p:last-child{
+          margin-bottom: 5px;
+        }
+    }
+
+    .reply{
+        margin-left: 45px; 
+        display: inline-block;;
+        margin-bottom: 10px;
+        a{
+            color: #fff;
+            font-size: .8em;
+            background: @gray-400;
+            padding: 3px 10px;
+            .border-radius(3px);
+            &:hover{
+                background: @gray-900;
+            }
+        }
+    }
+
+    .comment-list{
+        list-style: none;
+        margin: 0px;
+        .children{
+            list-style: none;
+            margin-left: 44px;
+        }
+    }
+}
+.reply-title{
+    a{
+    background: @gray-300;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin-left: 10px;
+    .border-radius(3px);
+        &:hover{
+          color: #fff;
+          background: @gray-600;
+        }
+    }
+}
+.logged-in-as{
+  font-size: 12px;
+}
+
+@media screen and (max-width: @screen-sm){
+    .product .woocommerce-tabs{
+        .border-box{
+            border: none;
+        }
+    }
+}
