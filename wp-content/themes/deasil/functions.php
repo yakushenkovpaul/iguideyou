@@ -233,17 +233,14 @@ function wc_rrp_save_product( $product_id ) {
 	}
 }
 
-add_action( 'woocommerce_single_product_summary', 'wc_rrp_show', 5 );
+// add_action( 'woocommerce_single_product_summary', 'wc_rrp_show', 5 );
 
 function wc_rrp_show() {
 	global $product;
 	// Ничего не предпринимаем для вариативных товаров
 	if ( $product->product_type <> 'variable' ) {
-		$rrp = get_post_meta( $product->id, 'rrp_price', true );
-		echo '<div class="woocommerce_msrp">';
-		_e( 'РРЦ : ', 'woocommerce' );
-		echo '<span class="woocommerce-rrp-price">' . woocommerce_price( $rrp ) . '</span>';
-		echo '</div>';
+		$value = get_post_meta( $product->id, 'rrp_price', true );
+		return $value;
 	}
 }
 
