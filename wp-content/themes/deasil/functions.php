@@ -213,33 +213,30 @@ function deasil_ocdi_import_files() {
 add_filter( 'pt-ocdi/import_files', 'deasil_ocdi_import_files' );
 
 
-add_action( 'woocommerce_product_options_pricing', 'wc_rrp_product_field' );
+add_action( 'woocommerce_product_options_pricing', 'wc_price_info_product_field' );
 
-function wc_rrp_product_field() {
-	woocommerce_wp_text_input( array( 'id' => 'rrp_price', 'class' => 'wc_input_price short', 'label' => __( 'РРЦ', 'woocommerce' ) . ' (' . get_woocommerce_currency_symbol() . ')' ) );
+function wc_price_info_product_field() {
+	woocommerce_wp_text_input( array( 'id' => 'price_info', 'class' => 'wc_input_price short', 'label' => __( 'Price info', 'woocommerce' )));
 }
 
-add_action( 'save_post', 'wc_rrp_save_product' );
+add_action( 'save_post', 'wc_price_info_save_product' );
 
-function wc_rrp_save_product( $product_id ) {
+function wc_price_info_save_product( $product_id ) {
 	// Если это автосохранение, то ничего не делаем, сохраняем данные только при нажатии на кнопку Обновить
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 		return;
-	if ( isset( $_POST['rrp_price'] ) ) {
-		if ( is_numeric( $_POST['rrp_price'] ) )
-		update_post_meta( $product_id, 'rrp_price', $_POST['rrp_price'] );
+	if ( isset( $_POST['price_info'] ) ) {
+		update_post_meta( $product_id, 'price_info', $_POST['price_info'] );
 	} else {	
-		delete_post_meta( $product_id, 'rrp_price' );
+		delete_post_meta( $product_id, 'price_info' );
 	}
 }
 
-//add_action( 'woocommerce_single_product_summary', 'wc_rrp_show', 5 );
-
-function wc_rrp_show() {
+function wc_price_info_show() {
 	global $product;
 	// Ничего не предпринимаем для вариативных товаров
 	if ( $product->product_type <> 'variable' ) {
-		$value = get_post_meta( $product->id, 'rrp_price', true );
+		$value = get_post_meta( $product->id, 'price_info', true );
 		echo '<p>' . woocommerce_price( $value ) . '</p>';
 	}
 }
