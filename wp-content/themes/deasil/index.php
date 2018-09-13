@@ -1,8 +1,4 @@
 <?php
-
-echo 'here';
-exit;
-
 /**
  * The main template file
  *
