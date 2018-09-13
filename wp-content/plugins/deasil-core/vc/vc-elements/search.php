@@ -107,12 +107,22 @@ if ( ! class_exists( 'Deasil_VC_Search' ) ) {
 				'hide_empty'   => 0,
 			);
 
-			$slidermin = deasil_minmax_price('min');
+
+/* 			$slidermin = deasil_minmax_price('min');
 			$slidermax = deasil_minmax_price('max');
+			$minprice = (empty($slidermin)) ? 0 : $slidermin;
+			$maxprice = (empty( $slidermax)) ? 1000 :  $slidermax; */
+
+			// Find min and max price in current result set.
+			$prices = deasil_get_filtered_price();
+			$slidermin    = floor( $prices->min_price );
+			$slidermax    = ceil( $prices->max_price );
+			
 			$minprice = (empty($slidermin)) ? 0 : $slidermin;
 			$maxprice = (empty( $slidermax)) ? 1000 :  $slidermax;
 
-            // Params extraction
+
+			// Params extraction
 			extract(
 				shortcode_atts(
 					array(
