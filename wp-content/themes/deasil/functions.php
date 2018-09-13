@@ -240,7 +240,7 @@ function wc_rrp_show() {
 	// Ничего не предпринимаем для вариативных товаров
 	if ( $product->product_type <> 'variable' ) {
 		$value = get_post_meta( $product->id, 'rrp_price', true );
-		return $value;
+		echo '<p>' . woocommerce_price( $value ) . '</p>';
 	}
 }
 
