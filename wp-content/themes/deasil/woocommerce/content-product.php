@@ -126,7 +126,7 @@ $deasil_add_to_cart_label = get_post_meta( get_the_ID(), 'deasil_add_to_cart_lab
 					</a>
 				</div>
 			</div>
-			<div class="price-info">Price for 2 adults</div>
+			<div class="price-info">This price is actual for 2 persons and child</div>
 
 		</div>
 
