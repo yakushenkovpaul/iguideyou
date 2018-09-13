@@ -21,7 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 global $post;
 
-$header_image = (isset($deasil_options['header_image'])) ? $deasil_options['header_image'] : '';
+$header_image = get_theme_mod('header_image');
+$blog_image = get_theme_mod('blog_image');
+
+// $header_image = (isset($deasil_options['header_image'])) ? $deasil_options['header_image'] : '';
 
 $woo_sidebar = (isset($deasil_options['woo_sidebar'])) ? $deasil_options['woo_sidebar'] : 'left-sidebar';
 $woo_image = (isset($deasil_options['woo_image'])) ? $deasil_options['woo_image'] : '';
@@ -32,13 +35,12 @@ $deasil_grid_column = (isset($deasil_options['woo_column_count'])) ? $deasil_opt
 get_header( 'shop' ); 
 ?>
 
-
-<?php  if ($woo_image != ''): ?>
-	<section class="page-img" style="background-image: url('<?php echo esc_url($woo_image);?>');">
+<?php  if ($blog_image != ''): ?>
+	<section class="page-img" style="background-image: url('<?php echo esc_url($blog_image);?>');">
 		<?php  elseif ($header_image != ''): ?>
 			<section class="page-img" style="background-image: url('<?php echo esc_url($header_image);?>');">
 				<?php else: ?>
-					<section class="page-img">
+					<section class="page-img" style="background-image: url('/wp-content/uploads/2018/08/photo-1503485841041-739cca570294-1.jpg');">
 					<?php endif;?>
 					<div class="page-img-txt container">
 

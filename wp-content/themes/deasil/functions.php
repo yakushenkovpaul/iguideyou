@@ -24,6 +24,7 @@ if ( ! function_exists( 'deasil_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function deasil_setup() {
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -243,4 +244,3 @@ function wc_price_info_show() {
 		return 'Price for 2 adults';
 	}
 }
-
