@@ -240,7 +240,7 @@ function wc_price_info_show() {
 		{
 			return $value;
 		}
-		return '[bbbb]';
+		return 'Price for 2 adults';
 	}
 }
 
