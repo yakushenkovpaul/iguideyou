@@ -219,3 +219,31 @@ function wc_rrp_product_field() {
 	woocommerce_wp_text_input( array( 'id' => 'rrp_price', 'class' => 'wc_input_price short', 'label' => __( 'РРЦ', 'woocommerce' ) . ' (' . get_woocommerce_currency_symbol() . ')' ) );
 }
 
+add_action( 'save_post', 'wc_rrp_save_product' );
+
+function wc_rrp_save_product( $product_id ) {
+	// Если это автосохранение, то ничего не делаем, сохраняем данные только при нажатии на кнопку Обновить
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+		return;
+	if ( isset( $_POST['rrp_price'] ) ) {
+		if ( is_numeric( $_POST['rrp_price'] ) )
+		update_post_meta( $product_id, 'rrp_price', $_POST['rrp_price'] );
+	} else {	
+		delete_post_meta( $product_id, 'rrp_price' );
+	}
+}
+
+add_action( 'woocommerce_single_product_summary', 'wc_rrp_show', 5 );
+
+function wc_rrp_show() {
+	global $product;
+	// Ничего не предпринимаем для вариативных товаров
+	if ( $product->product_type <> 'variable' ) {
+		$rrp = get_post_meta( $product->id, 'rrp_price', true );
+		echo '<div class="woocommerce_msrp">';
+		_e( 'РРЦ : ', 'woocommerce' );
+		echo '<span class="woocommerce-rrp-price">' . woocommerce_price( $rrp ) . '</span>';
+		echo '</div>';
+	}
+}
+
