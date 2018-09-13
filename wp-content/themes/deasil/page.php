@@ -43,7 +43,7 @@ $page_title = get_post_meta( get_the_ID(), 'deasil_page_title', true);
 				<?php the_title( '<h1>', '</h1>' ); ?>
 				<?php 
 				if ( has_excerpt() ) {
-					if(!is_page(array('cart', 'checkout', 'my-account'))) the_excerpt('<p>', '</p>');
+					// if(!is_page(array('cart', 'checkout', 'my-account'))) the_excerpt('<p>', '</p>');
 				}
 				?>
 			</div>
@@ -54,7 +54,7 @@ $page_title = get_post_meta( get_the_ID(), 'deasil_page_title', true);
 						<?php the_title( '<h1 class="main-head">', '</h1>' ); ?>
 						<?php 
 						if ( has_excerpt() ) {
-							if(!is_page(array('cart', 'checkout', 'my-account'))) the_excerpt('<p>', '</p>');
+							// if(!is_page(array('cart', 'checkout', 'my-account'))) the_excerpt('<p>', '</p>');
 						}
 						?>
 					</div>
