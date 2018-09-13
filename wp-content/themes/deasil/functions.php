@@ -236,8 +236,11 @@ function wc_price_info_show() {
 	global $product;
 	// Ничего не предпринимаем для вариативных товаров
 	if ( $product->product_type <> 'variable' ) {
-		$value = get_post_meta( $product->id, 'price_info', true );
-		echo '<p>' . woocommerce_price( $value ) . '</p>';
+		if($value = get_post_meta( $product->id, 'price_info', true ))
+		{
+			return $value;
+		}
+		return '';
 	}
 }
 
