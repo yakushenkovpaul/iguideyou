@@ -211,3 +211,11 @@ function deasil_ocdi_import_files() {
 	);
 }
 add_filter( 'pt-ocdi/import_files', 'deasil_ocdi_import_files' );
+
+
+add_action( 'woocommerce_product_options_pricing', 'wc_rrp_product_field' );
+
+function wc_rrp_product_field() {
+	woocommerce_wp_text_input( array( 'id' => 'rrp_price', 'class' => 'wc_input_price short', 'label' => __( 'РРЦ', 'woocommerce' ) . ' (' . get_woocommerce_currency_symbol() . ')' ) );
+}
+
