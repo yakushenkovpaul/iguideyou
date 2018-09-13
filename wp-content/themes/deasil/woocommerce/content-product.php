@@ -126,7 +126,7 @@ $deasil_add_to_cart_label = get_post_meta( get_the_ID(), 'deasil_add_to_cart_lab
 					</a>
 				</div>
 			</div>
-			<div class="price-info"><?php wc_rrp_show();?></div>
+			<div class="price-info"><?php wc_price_info_show();?></div>
 
 		</div>
 
