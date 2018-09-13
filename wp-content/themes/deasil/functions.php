@@ -216,7 +216,7 @@ add_filter( 'pt-ocdi/import_files', 'deasil_ocdi_import_files' );
 add_action( 'woocommerce_product_options_pricing', 'wc_price_info_product_field' );
 
 function wc_price_info_product_field() {
-	woocommerce_wp_text_input( array( 'id' => 'price_info', 'class' => 'wc_input_price short', 'label' => __( 'Price info', 'woocommerce' )));
+	woocommerce_wp_text_input( array( 'id' => 'price_info', 'class' => 'short', 'label' => __( 'Price info', 'woocommerce' )));
 }
 
 add_action( 'save_post', 'wc_price_info_save_product' );
