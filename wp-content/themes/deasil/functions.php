@@ -242,5 +242,6 @@ function wc_price_info_show() {
 		}
 		return 'aaa';
 	}
+	return 'bbb';
 }
 
