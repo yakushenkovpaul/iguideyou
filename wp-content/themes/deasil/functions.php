@@ -233,7 +233,7 @@ function wc_rrp_save_product( $product_id ) {
 	}
 }
 
-// add_action( 'woocommerce_single_product_summary', 'wc_rrp_show', 5 );
+add_action( 'woocommerce_single_product_summary', 'wc_rrp_show', 5 );
 
 function wc_rrp_show() {
 	global $product;
