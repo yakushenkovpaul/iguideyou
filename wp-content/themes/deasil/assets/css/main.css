@@ -3296,6 +3296,11 @@ textarea.wpcf7-form-control:focus {
 		background-position: top;
 	}
 
+	.feature-list
+	{
+		padding-top: 20px;
+	}
+
   .modal-book-now .preview-wrap .preview-img {
     height: 200px;
     width: 100%;
