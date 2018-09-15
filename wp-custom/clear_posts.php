@@ -6,6 +6,8 @@
  * 
  */
 
+exit;
+
 include_once(dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'wp-load.php');
 
 //пропускаем определенные блоги, это их идентификаторы
