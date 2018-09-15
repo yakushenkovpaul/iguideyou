@@ -3298,10 +3298,10 @@ textarea.wpcf7-form-control:focus {
 
 	.feature-list
 	{
-		padding-top: 20px;
+		padding-bottom: 60px;
 	}
 
-  .modal-book-now .preview-wrap .preview-img {
+	.modal-book-now .preview-wrap .preview-img {
     height: 200px;
     width: 100%;
     position: relative;
