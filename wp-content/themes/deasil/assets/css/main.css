@@ -1764,6 +1764,12 @@ hr.dark {
   }
 }
 @media screen and (max-width: 767px) {
+
+	h1
+	{
+		font-size: 80%;
+	}
+
   .rtl .nav-menu .default-menu > ul,
   .rtl .nav-menu .default-menu > ul > li,
   .rtl .nav-menu .default-menu > ul > li a {
