@@ -2400,7 +2400,7 @@ hr.dark {
   margin: 0 0 30px;
   padding: 180px 0 90px;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   /* background-attachment: fixed; */
   position: relative;
@@ -3290,6 +3290,12 @@ textarea.wpcf7-form-control:focus {
   }
 }
 @media screen and (max-width: 767px) {
+
+	.page-img
+	{
+		background-position: top;
+	}
+
   .modal-book-now .preview-wrap .preview-img {
     height: 200px;
     width: 100%;
