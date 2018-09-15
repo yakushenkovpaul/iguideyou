@@ -1,18 +1,19 @@
 <?php
 
 function deasil_customize_css(){
-	$head_font = get_theme_mod('head_font', 'Montserrat');
-	$body_font = get_theme_mod('body_font', 'Open Sans');
+	$head_font = get_theme_mod('head_font', 'Sans-serif');
+	$body_font = get_theme_mod('body_font', 'Sans-serif');
 
 	if($head_font == '0'){
-		$head_font = 'Montserrat';
+		$head_font = 'Sans-serif';
 	}
 	if($body_font == '0'){
-		$body_font = 'Open Sans';
+		$body_font = 'Sans-serif';
 	}
 	
 	$font_color = '#444444';
-	$font_size_base = get_theme_mod('font_size', '14px');
+	$font_size_base = '16px';
+	$font_line_height = '1.6';
 	$primary_color = get_theme_mod('primary_color', '#558b2f');
 	$base_color = get_theme_mod('base_color', '#111111');
 
@@ -65,6 +66,7 @@ function deasil_customize_css(){
 		font-family: <?php echo $body_font;?>;
 		color: <?php echo $font_color;?>;
 		font-size: <?php echo $font_size_base;?> !important;
+		line-height: <?php echo $font_line_height;?>;
 	}
 
 

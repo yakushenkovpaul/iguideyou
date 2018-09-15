@@ -51,18 +51,20 @@ $deasil_add_to_cart_label = get_post_meta( get_the_ID(), 'deasil_add_to_cart_lab
 		</div>
 
 		<div class="item-desc">
-
-			<h4 class="item-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
-			<div class="location">
-				<?php $location = strip_tags(get_the_term_list( $post->ID, 'location', '', ', ' , '' ));?>
-				<?php if($location != ""){
-					echo esc_html($location);
-				}?>
+			<div class="item-headline">
+				<h4 class="item-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
+				<div class="location">
+					<?php $location = strip_tags(get_the_term_list( $post->ID, 'location', '', ', ' , '' ));?>
+					<?php if($location != ""){
+						echo esc_html($location);
+					}?>
+				</div>
 			</div>
 			<div class="item-excerpt"><?php echo get_the_excerpt();?></div>
 
 			<div class="item-detail">	
 				<div class="left">
+					<!--
 					<div class="day">
 						<span class="icon-sun"></span>
 						<?php if(!empty($deasil_day) && ($deasil_day != '')): ?>
@@ -79,6 +81,7 @@ $deasil_add_to_cart_label = get_post_meta( get_the_ID(), 'deasil_add_to_cart_lab
 							<span class="disable"><?php esc_html_e('NA', 'deasil');?></span>
 						<?php endif;?>
 					</div>
+				-->
 				</div>
 				<div class="right">
 					<div class="item-info">
@@ -113,8 +116,12 @@ $deasil_add_to_cart_label = get_post_meta( get_the_ID(), 'deasil_add_to_cart_lab
 				<div class="left">
 					<?php woocommerce_template_loop_price();?>
 				</div>
-				<div class="right">
-					<a href="<?php the_permalink();?>" class="btn btn-primary">
+				<div class="right price-info">
+					<?php echo wc_price_info_show();?>
+				</div>
+			</div>
+			<div class="bottom-button">
+			<a href="<?php the_permalink();?>" class="btn btn-primary">
 					<?php 
 					if($deasil_add_to_cart_label != ''){
 						echo $deasil_add_to_cart_label;
@@ -123,10 +130,8 @@ $deasil_add_to_cart_label = get_post_meta( get_the_ID(), 'deasil_add_to_cart_lab
 					esc_html_e('Book Now', 'deasil');	
 					}
 					?>	
-					</a>
+					</a>								
 				</div>
-			</div>
-			<div class="price-info"><?php echo wc_price_info_show();?></div>
 
 		</div>
 

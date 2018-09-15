@@ -244,3 +244,23 @@ function wc_price_info_show() {
 		return 'Price for 2 adults';
 	}
 }
+
+add_filter( 'the_content', 'the_content_filter', 20 );
+
+function the_content_filter( $content ) {
+		global $_SERVER;
+		//Если это главная страница, то ничего не делаем
+		if($_SERVER[ 'REQUEST_URI' ] == '/')
+		{
+			return $content;
+		}
+		$content = preg_replace('#<h1.*?>(.*?)</h1>#i', '<h3>\1</h3>', $content);
+    return $content;
+}
+
+/* add_filter( 'wp_insert_post_data' , 'filter_post_data' , '99', 2 );
+
+function filter_post_data( $data , $postarr ) {
+    $data['post_content'] = strip_tags($data['post_content']);
+    return $data;
+} */
