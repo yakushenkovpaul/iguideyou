@@ -3289,6 +3289,11 @@ textarea.wpcf7-form-control:focus {
     width: 60%;
   }
 }
+
+/*
+For mobile resolutions
+*/
+
 @media screen and (max-width: 767px) {
 
 	.single-item .item-desc .price-wrap .left
