@@ -3291,6 +3291,21 @@ textarea.wpcf7-form-control:focus {
 }
 @media screen and (max-width: 767px) {
 
+	.single-item .item-desc .price-wrap .left
+	{
+		float: left !important;
+	}
+
+	.single-item .item-desc .price-info
+	{
+		text-align: right !important;
+	}
+
+	.single-item .item-desc .right .item-info
+	{
+		text-align: center !important;
+	}
+
 	.page-img
 	{
 		background-position: top;
@@ -3299,6 +3314,11 @@ textarea.wpcf7-form-control:focus {
 	.feature-list
 	{
 		padding-bottom: 60px;
+	}
+
+	.wpb_animate_when_almost_visible
+	{
+		margin-top: 60px;
 	}
 
 	.modal-book-now .preview-wrap .preview-img {

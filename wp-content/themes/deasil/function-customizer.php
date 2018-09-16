@@ -5,10 +5,12 @@ function deasil_customize_css(){
 	$body_font = get_theme_mod('body_font', 'Sans-serif');
 
 	if($head_font == '0'){
-		$head_font = 'Sans-serif';
+		// $head_font = 'Sans-serif';
+		$head_font = 'Open Sans,Arial,sans-serif';
 	}
 	if($body_font == '0'){
-		$body_font = 'Sans-serif';
+		// $body_font = 'Sans-serif';
+		$body_font = 'Open Sans,Arial,sans-serif';
 	}
 	
 	$font_color = '#444444';
