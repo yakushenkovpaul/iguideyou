@@ -4777,7 +4777,7 @@ blockquote h6 {
   top: 3px;
 }
 .sidebar ul li:not(.chosen) a {
-  word-break: break-all;
+  /*word-break: break-all;*/
 }
 .sidebar ul ul {
   margin-top: 15px;
