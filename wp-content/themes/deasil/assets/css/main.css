@@ -4252,6 +4252,7 @@ blockquote h6 {
 .feature-box .desc {
 	text-align: center;
 	min-height: 120px;
+	height: 160px;
 }
 .feature-box .desc h1,
 .feature-box .desc h2,
