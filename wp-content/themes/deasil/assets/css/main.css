@@ -4208,7 +4208,8 @@ blockquote h6 {
 .feature-list .desc {
   margin-left: 95px;
   margin-bottom: 30px;
-  min-height: 80px;
+	min-height: 80px;
+	padding-top: 8px;
 }
 .feature-list .desc h1,
 .feature-list .desc h2,
@@ -4243,13 +4244,14 @@ blockquote h6 {
 .feature-box {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #fff;
-  padding: 30px;
+  padding: 20px;
   margin: 50px 0;
   position: relative;
   border-radius: 5px;
 }
 .feature-box .desc {
-  text-align: center;
+	text-align: center;
+	min-height: 120px;
 }
 .feature-box .desc h1,
 .feature-box .desc h2,
@@ -4276,7 +4278,8 @@ blockquote h6 {
 }
 @media screen and (max-width: 767px) {
   .feature-list .desc {
-    margin-bottom: 10px;
+		margin-bottom: 10px;
+		padding-top: 0px;
   }
   .square-icon {
     margin-top: 0px;
