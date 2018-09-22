@@ -258,9 +258,9 @@ function the_content_filter( $content ) {
     return $content;
 }
 
-/* add_filter( 'wp_insert_post_data' , 'filter_post_data' , '99', 2 );
+add_filter( 'wp_insert_post_data' , 'filter_post_data' , '99', 2 );
 
 function filter_post_data( $data , $postarr ) {
     $data['post_content'] = strip_tags($data['post_content']);
     return $data;
-} */
+}
