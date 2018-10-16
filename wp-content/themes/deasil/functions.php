@@ -264,3 +264,51 @@ function filter_post_data( $data , $postarr ) {
     $data['post_content'] = strip_tags($data['post_content']);
     return $data;
 } */
+
+
+function callback($buffer) {
+
+	$array = array(
+		'Price for 2 adults' => 'Precio para 2 adultos',
+		'Hours' => 'Horas',
+		'Price' => 'Precio',
+		'For 2 adults' => 'Para 2 adultos',
+		'Transportation' => 'Transporte',
+		'Walking tour' => 'Tour a pie',
+		'Boat' => 'Boat',
+		'Kick scooter' => 'Patineta',
+		'For children ' => 'Para niños',
+		'Not recommended' => 'No recomendado',
+		'Yes' => 'Si',
+		'Lunch' => 'Almuerzo',
+		'Not included' => 'No incluido',
+		'Included' => 'Included',
+		'' => '',
+		'' => '',
+		'' => '',
+		'' => '',		
+	);
+
+	if(!empty(($array)))
+	{
+		foreach ($array as $key => $value) {
+			$buffer = str_replace($key, $value, $buffer);			
+		}
+	}
+
+	return $buffer;
+}
+
+function buffer_start() {
+  ob_start("callback");
+}
+
+function buffer_end() {
+  ob_end_flush();
+}
+
+if(preg_match("#/es#", $_SERVER[ 'REQUEST_URI' ]))
+{
+	add_action('wp_head', 'buffer_start');
+	add_action('wp_footer', 'buffer_end');
+}
