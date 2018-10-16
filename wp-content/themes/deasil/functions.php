@@ -321,7 +321,7 @@ function callback($buffer) {
 		'A gift' => 'Un regalo',	
 		'Alcohol or Beverage' => 'Alcohol o bebida',
 		'Camera and other non trek accessories' => 'Cámara y otros accesorios que no sean de trekking',
-		'' => '',
+		'Step' => 'Paso',
 		'' => '',	
 		'' => '',
 		'' => '',
