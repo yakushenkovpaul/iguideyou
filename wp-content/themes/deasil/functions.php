@@ -277,7 +277,7 @@ function callback($buffer) {
 		'Walking tour' => 'Tour a pie',
 		'Boat' => 'Boat',
 		'Kick scooter' => 'Patineta',
-		'For children ' => 'Para niños',
+		'For children' => 'Para niños',
 		'Not recommended' => 'No recomendado',
 		'Yes' => 'Si',
 		'Lunch' => 'Almuerzo',
