@@ -306,10 +306,14 @@ function callback($buffer) {
 		'Sale' => 'Venta',		
 		'Tour Search' => 'Búsqueda de tours',
 		'About us' => 'Sobre nosotros',
+		'Your' => 'Tu',	
+		'Name' => 'Nombre',
+		'Message' => 'Mensaje',	
+		'required' => 'necesario',		
 		'' => '',	
 		'' => '',
 		'' => '',
-		'' => '',										
+		'' => '',									
 	);
 
 	if(!empty(($array)))
