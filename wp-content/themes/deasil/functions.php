@@ -301,9 +301,15 @@ function callback($buffer) {
 		'Send' => 'Enviar',
 		'Comfort' => 'Comodidad',
 		'Easy' => 'Fácil',
+		'Search' => 'Buscar',
+		'Our best offer' => 'Nuestra mejor oferta',
+		'Sale' => 'Venta',		
+		'Tour Search' => 'Búsqueda de tours',
+		'About us' => 'Sobre nosotros',
+		'' => '',	
 		'' => '',
 		'' => '',
-		'' => '',											
+		'' => '',										
 	);
 
 	if(!empty(($array)))
