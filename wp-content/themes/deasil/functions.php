@@ -249,8 +249,12 @@ add_filter( 'the_content', 'the_content_filter', 20 );
 
 function the_content_filter( $content ) {
 		global $_SERVER;
+
+		echo '[' . $_SERVER[ 'REQUEST_URI' ] . ']' . PHP_EOL;
+		exit;
+
 		//Если это главная страница, то ничего не делаем
-		if($_SERVER[ 'REQUEST_URI' ] == '/' || $_SERVER[ 'REQUEST_URI' ] == '/es')
+		if($_SERVER[ 'REQUEST_URI' ] == '/' || $_SERVER[ 'REQUEST_URI' ] == '/es/')
 		{
 			return $content;
 		}
