@@ -270,7 +270,7 @@ function filter_post_data( $data , $postarr ) {
 function callback($buffer) {
 
 	$array = array(
-		'Price for 2 adults' => 'Precio para 2022 adultos',
+		'Price for 2 adults' => 'Precio para 20222 adultos',
 		'Hours' => 'Horas',
 		'Price' => 'Precio',
 		'For 2 adults' => 'Para 2 adultos',
