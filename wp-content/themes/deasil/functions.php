@@ -271,59 +271,7 @@ function filter_post_data( $data , $postarr ) {
 function callback($buffer) {
 
 	$array = array(
-		'Price for 2 adults' => 'Precio para 2 adultos',
-		'Hours' => 'Horas',
-		'Price' => 'Precio',
-		'For 2 adults' => 'Para 2 adultos',
-		'Transportation' => 'Transporte',
-		'Walking tour' => 'Tour a pie',
-		'Boat' => 'Boat',
-		'Kick scooter' => 'Patineta',
-		'For children' => 'Para niños',
-		'Not recommended' => 'No recomendado',
-		'Yes' => 'Si',
-		'Lunch' => 'Almuerzo',
-		'Not included' => 'No incluido',
-		'Included' => 'Included',
-		'Category' => 'Categoría',
-		'Location' => 'Ubicación',
-		'Grade' => 'Grado',
-		'Overview' => 'Visión general',
-		'Itinerary' => 'Itinerario',
-		'Cost' => 'Costo',
-		'Book' => 'Libro',
-		'Valoraciones' => 'Valoraciones',
-		'Related Products' => 'Relacionado',	
-		'Tough' => 'Difícil',
-		'Average' => 'Promedio',
-		'Add to Quote' => 'Añadir',
-		'Quick Link' => 'Enlace rápido',
-		'Contact' => 'Contacto',
-		'Subscribe Newsletter' => 'Suscríbete al boletín informativo',
-		'Send' => 'Enviar',
-		'Comfort' => 'Comodidad',
-		'Easy' => 'Fácil',
-		'Search' => 'Buscar',
-		'Our best offer' => '¡NUESTRA MEJOR OFERTA!',
-		'Sale' => 'Venta',
-		'Tour Search' => 'Búsqueda de excursiones',
-		'About us' => 'Sobre nosotros',
-		'Your' => 'Tu',	
-		'Name' => 'Nombre',
-		'Message' => 'Mensaje',	
-		'required' => 'necesario',		
-		'Add a review' => 'Agrega una reseña',	
-		'Submit' => 'Enviar',
-		'Included' => 'Incluido',
-		'Number of Person' => 'Numero de personas',
-		'Inquire about tour' => 'Preguntar sobre el tour',	
-		'Not Included' => 'No incluido',
-		'All transportation' => 'Todo el transporte',
-		'Guide and staffs' => 'Guia y personal',		
-		'A gift' => 'Un regalo',	
-		'Alcohol or Beverage' => 'Alcohol o bebida',
-		'Camera and other non trek accessories' => 'Cámara y otros accesorios que no sean de trekking',
-		'Step' => 'Paso'
+		'next' => 'далее',
 	);
 
 	if(!empty(($array)))
@@ -345,8 +293,6 @@ function buffer_end() {
   ob_end_flush();
 }
 
-if(preg_match("#/es#", $_SERVER[ 'REQUEST_URI' ]))
-{
-	add_action('wp_head', 'buffer_start');
-	add_action('wp_footer', 'buffer_end');
-}
+
+echo 'here1';
+exit;
