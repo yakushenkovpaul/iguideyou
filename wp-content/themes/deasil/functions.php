@@ -1,4 +1,8 @@
 <?php
+
+echo 'here1';
+exit;
+
 /**
  * Deasil functions and definitions
  *
@@ -335,6 +339,7 @@ function callback($buffer) {
 	return $buffer;
 }
 
+//https://stackoverflow.com/questions/772510/wordpress-filter-to-modify-final-html-output
 function buffer_start() {
   ob_start("callback");
 }
