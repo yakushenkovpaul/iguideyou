@@ -1,8 +1,5 @@
 <?php
 
-echo 'here1';
-exit;
-
 /**
  * Deasil functions and definitions
  *
