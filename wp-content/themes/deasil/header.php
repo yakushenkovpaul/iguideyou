@@ -24,7 +24,7 @@ else{
 
 ?>
 
-<!DOCTYPE html><!-- aaaaqqqq1 -->
+<!DOCTYPE html><!-- aaaaqqqq11 -->
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
